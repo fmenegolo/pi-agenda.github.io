@@ -15,13 +15,18 @@
 		<h2>Informações do Professor</h2>
 		<label for="nome">Nome:</label>
 		<input type="text" id="nome" name="nome" required><br>
-		<label>Turno de aula:</label>
-		<input type="radio" id="manha-tarde" name="turno" value="manha-tarde" required>
-		<label for="manha-tarde">Manhã/Tarde</label>
-		<input type="radio" id="tarde-noite" name="turno" value="tarde-noite" required>
-		<label for="tarde-noite">Tarde/Noite</label><br>
 		<label for="data">Data:</label>
 		<input type="date" id="data" name="data" required><br>
+		<label>Turno de aula:</label>
+		<input type="radio" id="manha-tarde" name="turno" value="manha-tarde" required
+			onclick="preencherHorarios('manha-tarde')">
+		<label for="manha-tarde">Manhã/Tarde</label>
+		<input type="radio" id="tarde-noite" name="turno" value="tarde-noite" required
+			onclick="preencherHorarios('tarde-noite')">
+		<label for="tarde-noite">Tarde/Noite</label><br>
+		<button type="button"
+			onclick="preencherHorarios(document.querySelector('input[name=turno]:checked').value)">Preencher
+			Horários</button>
 
 		<!-- Parte 2 -->
 		<h2>Horários e Aulas</h2>
@@ -35,63 +40,62 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-1" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-1" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-2" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-2" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-3" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-3" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-4" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-4" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-5" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-5" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-6" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-6" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-7" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-7" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-8" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-8" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-9" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-9" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-10" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-10" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" value=""></td>
-					<td><input type="text" name="horario-fim[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-11" value=""></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-11" value=""></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 			</tbody>
 		</table>
-
 		<button type="submit">Enviar</button>
 	</form>
 </body>
