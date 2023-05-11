@@ -1,21 +1,34 @@
-Para criar um ambiente no Docker que hospede seu site e um banco de dados, você pode seguir os seguintes passos:
+# Agenda Semanal de Trabalho
 
-1. Instale o Docker no seu computador.
+Este projeto consiste em uma aplicação web que permite a geração de uma agenda semanal de trabalho para professores de uma escola. Através de uma interface simples, o usuário pode selecionar um professor, mês e ano, e a aplicação irá gerar automaticamente uma tabela com o quadro de trabalho semanal do professor selecionado.
 
-2. Copie o arquivo Dockerfile na raiz do seu projeto para definir como seu contêiner será construído.
+## Tecnologias Utilizadas
 
-3. Copie o arquivo docker-compose.yml na raiz do seu projeto para definir como seu ambiente Docker será configurado. 
+- HTML
+- CSS
+- JavaScript
+- PHP
+- MySQL
 
-4. Execute o comando docker-compose up -d na raiz do seu projeto para criar e iniciar seus contêineres.
+## Pré-requisitos
 
-5. Acesse seu site no navegador em http://localhost:8000.
+- Docker
+- Docker Compose
 
-6. Para se comunicar com o banco de dados, use as credenciais definidas no arquivo docker-compose.yml:
+## Como Usar
 
-Host: db
-Porta: 3306
-Usuário: root
-Senha: mypassword
-Banco de dados: mydatabase
+1. Clone este repositório em sua máquina local.
+2. No diretório raiz do projeto, execute o comando `docker-compose up`.
+3. Acesse a aplicação em seu navegador através da URL `http://localhost:8080`.
+4. Selecione o professor, mês e ano desejados e clique no botão "Gerar Agenda" para visualizar a agenda semanal de trabalho do professor.
 
-Com esses passos, você criou um ambiente no Docker que hospeda o site e um banco de dados, e pode persistir as informações no banco de dados.
+## Estrutura do Projeto
+
+- `app/` - Contém os arquivos da aplicação web.
+- `db/` - Contém os arquivos do banco de dados MySQL.
+- `docker-compose.yml` - Arquivo de configuração do Docker Compose.
+- `Dockerfile` - Arquivo de configuração do Docker.
+
+## Autor
+
+[nomes aqui]
