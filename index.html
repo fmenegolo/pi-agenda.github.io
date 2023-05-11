@@ -5,7 +5,63 @@
 	<meta charset="UTF-8">
 	<title>Formulário de Registro de Aulas</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="/script.js"></script>
+	<script>
+		function preencherHorarios(turno) {
+			var horarios = document.getElementsByName("horario-inicio[]");
+			var fim = document.getElementsByName("horario-fim[]");
+
+			if (turno === "manha-tarde") {
+				horarios[0].value = "07:00";
+				horarios[1].value = "07:45";
+				horarios[2].value = "08:30";
+				horarios[3].value = "09:30";
+				horarios[4].value = "10:15";
+				horarios[5].value = "11:00";
+				horarios[6].value = "12:30";
+				horarios[7].value = "13:15";
+				horarios[8].value = "14:00";
+				horarios[9].value = "14:45";
+				horarios[10].value = "15:30";
+
+				fim[0].value = "07:45";
+				fim[1].value = "08:30";
+				fim[2].value = "09:15";
+				fim[3].value = "10:15";
+				fim[4].value = "11:00";
+				fim[5].value = "11:45";
+				fim[6].value = "13:15";
+				fim[7].value = "14:00";
+				fim[8].value = "14:45";
+				fim[9].value = "15:30";
+				fim[10].value = "16:00";
+			} else if (turno === "tarde-noite") {
+				horarios[0].value = "12:15";
+				horarios[1].value = "13:00";
+				horarios[2].value = "13:45";
+				horarios[3].value = "14:15";
+				horarios[4].value = "15:00";
+				horarios[5].value = "15:45";
+				horarios[6].value = "16:45";
+				horarios[7].value = "17:30";
+				horarios[8].value = "18:15";
+				horarios[9].value = "19:45";
+				horarios[10].value = "20:30";
+
+				fim[0].value = "13:00";
+				fim[1].value = "13:45";
+				fim[2].value = "14:15";
+				fim[3].value = "15:00";
+				fim[4].value = "15:45";
+				fim[5].value = "16:30";
+				fim[6].value = "17:30";
+				fim[7].value = "18:15";
+				fim[8].value = "19:00";
+				fim[9].value = "20:30";
+				fim[10].value = "21:15";
+			}
+		}
+
+	</script>
 </head>
 
 <body>
@@ -24,9 +80,11 @@
 		<input type="radio" id="tarde-noite" name="turno" value="tarde-noite" required
 			onclick="preencherHorarios('tarde-noite')">
 		<label for="tarde-noite">Tarde/Noite</label><br>
+		<!--
 		<button type="button"
 			onclick="preencherHorarios(document.querySelector('input[name=turno]:checked').value)">Preencher
 			Horários</button>
+		-->
 
 		<!-- Parte 2 -->
 		<h2>Horários e Aulas</h2>
@@ -40,59 +98,59 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-1" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-1" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-1" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-1" value="" disabled></td>
 					<td><input type="text" name="observacoes[]" value=""></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-2" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-2" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-2" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-2" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-3" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-3" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-3" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-3" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-4" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-4" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-4" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-4" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-5" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-5" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-5" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-5" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-6" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-6" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-6" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-6" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-7" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-7" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-7" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-7" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-8" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-8" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-8" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-8" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-9" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-9" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-9" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-9" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-10" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-10" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-10" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-10" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="horario-inicio[]" id="horario-inicio-11" value=""></td>
-					<td><input type="text" name="horario-fim[]" id="horario-fim-11" value=""></td>
-					<td><input type="text" name="observacoes[]" value=""></td>
+					<td><input type="text" name="horario-inicio[]" id="horario-inicio-11" value="" disabled></td>
+					<td><input type="text" name="horario-fim[]" id="horario-fim-11" value="" disabled></td>
+					<td><input type="text" name="observacoes[]" value="" required></td>
 				</tr>
 			</tbody>
 		</table>
