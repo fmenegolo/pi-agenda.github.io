@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Agenda Semanal de Trabalho</title>
+	<link rel="stylesheet" type="text/css" href="template.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h1>Nome da Escola</h1>
+		<img src="logo_estado_sp.png" alt="Logo do Estado de São Paulo">
+		<img src="logo_escola.png" alt="Logo da Escola">
+		<h2>Agenda Semanal de Trabalho</h2>
+		<h3>Periodo Semanal: <?php echo $primeiro_dia_util_semana." a ".$ultimo_dia_util_semana." de ".$mes_pesquisado; ?></h3>
+	</div>
+	<div id="content">
+		<table>
+			<tr>
+				<th>Professor</th>
+				<th>Disciplinas</th>
+			</tr>
+			<?php foreach($professores as $professor) { ?>
+			<tr>
+				<td><?php echo $professor['nome']; ?></td>
+				<td><?php echo implode(", ", $professor['disciplinas']); ?></td>
+			</tr>
+			<?php } ?>
+		</table>
+		<table>
+			<tr>
+				<th>Horário</th>
+				<th>Segunda-feira</th>
+				<th>Terça-feira</th>
+				<th>Quarta-feira</th>
+				<th>Quinta-feira</th>
+				<th>Sexta-feira</th>
+			</tr>
+			<?php foreach($horarios as $horario) { ?>
+			<tr>
+				<td><?php echo $horario['horario']; ?></td>
+				<td><?php echo $horario['segunda']; ?></td>
+				<td><?php echo $horario['terca']; ?></td>
+				<td><?php echo $horario['quarta']; ?></td>
+				<td><?php echo $horario['quinta']; ?></td>
+				<td><?php echo $horario['sexta']; ?></td>
+			</tr>
+			<?php } ?>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+#header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#header img {
+	max-width: 100%;
+	height: auto;
+}
+
+#content table {
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+
+#content table th, #content table td {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+
+#content table th {
+	background-color: #eee;
+}
+
+#content table td {
+	background-color: #fff;
+}
+
+.page-break {
+	page-break-after: always;
+}
