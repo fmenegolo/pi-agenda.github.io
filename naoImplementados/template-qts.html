@@ -1,52 +1,62 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Agenda Semanal de Trabalho</title>
-	<link rel="stylesheet" type="text/css" href="template.css">
-	<script src="script.js"></script>
-</head>
-<body>
-	<div id="header">
-		<h1>Nome da Escola</h1>
-		<img src="logo_estado_sp.png" alt="Logo do Estado de São Paulo">
-		<img src="logo_escola.png" alt="Logo da Escola">
-		<h2>Agenda Semanal de Trabalho</h2>
-		<h3>Periodo Semanal: <?php echo $primeiro_dia_util_semana." a ".$ultimo_dia_util_semana." de ".$mes_pesquisado; ?></h3>
-	</div>
-	<div id="content">
-		<table>
-			<tr>
-				<th>Professor</th>
-				<th>Disciplinas</th>
-			</tr>
-			<?php foreach($professores as $professor) { ?>
-			<tr>
-				<td><?php echo $professor['nome']; ?></td>
-				<td><?php echo implode(", ", $professor['disciplinas']); ?></td>
-			</tr>
-			<?php } ?>
-		</table>
-		<table>
-			<tr>
-				<th>Horário</th>
-				<th>Segunda-feira</th>
-				<th>Terça-feira</th>
-				<th>Quarta-feira</th>
-				<th>Quinta-feira</th>
-				<th>Sexta-feira</th>
-			</tr>
-			<?php foreach($horarios as $horario) { ?>
-			<tr>
-				<td><?php echo $horario['horario']; ?></td>
-				<td><?php echo $horario['segunda']; ?></td>
-				<td><?php echo $horario['terca']; ?></td>
-				<td><?php echo $horario['quarta']; ?></td>
-				<td><?php echo $horario['quinta']; ?></td>
-				<td><?php echo $horario['sexta']; ?></td>
-			</tr>
-			<?php } ?>
-		</table>
-	</div>
-</body>
-</html>
+<table class="table table-bordered">
+	<thead>
+		<tr class="table-primary">
+			<td colspan='6'>
+				<div class="thead-content">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg/83px-Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg.png" alt="">
+					<div class="thead-content__text">
+						<p>E. E. PROF IZABEL DE ALMEIDA MARIN - PEI</p>
+						<p>AGENDA SEMANAL DE TRABALHO</p>
+						<p>PERÍODO SEMANA: 00 A 00 DE MAIO</p>
+					</div>
+					<img src="https://placehold.co/92x50" alt="">
+				</div>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="head-columns table-secondary">
+			<td colspan=2>
+				<p><strong>PROFESSOR</strong></p>
+				<p>nome</p>
+			</td>
+			<td colspan=4>
+				<p><strong>DISCIPLINAS:</strong></p>
+				<p>disciplinas*</p>
+			</td>
+		</tr>
+		<tr class="table-secondary">
+			<td>Horário</td>
+			<td>Segunda</td>
+			<td>Terça</td>
+			<td>Quarta</td>
+			<td>Quinta</td>
+			<td>Sexta</td>
+		</tr>
+		<tr>
+			<td class="table-primary text-danger">
+				<strong>12h-15 - 13h</strong>
+			</td>
+			<td>
+				<p>Adicionar Info.</p>
+			</td>
+			<td>
+				<p>Adicionar Info.</p>
+			</td>
+			<td>
+				<p>ADICIONAR INFO.</p>
+			</td>
+			<td>
+				<p>ADIDICIONAR INFO.</p>
+			</td>
+			<td>
+				<p>ADICIONAR INFO.</p>
+			</td>
+		</tr>
+		<tr class='td-intervalo table-warning'>
+			<td colspan="6">
+				<p style="text-align:center;"><strong>intervalo: 16h30 - 16h45</strong></p>
+			</td>
+		</tr>
+	</tbody>
+</table>

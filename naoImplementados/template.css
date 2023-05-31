@@ -1,32 +1,31 @@
-#header {
+.table {
+	width: 860px;
+	margin: 0 auto;
+  }
+  
+  thead {
+	font-weight: bold;
+  }
+  
+  .thead-content {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 80px;
+  }
+  .thead-content__text {
+	line-height: 25px;
 	text-align: center;
-	margin-bottom: 30px;
-}
-
-#header img {
-	max-width: 100%;
-	height: auto;
-}
-
-#content table {
-	border-collapse: collapse;
-	margin-bottom: 30px;
-}
-
-#content table th, #content table td {
-	padding: 10px;
+  }
+  
+  .head-columns {
+	line-height: 25px;
+  }
+  
+  p {
+	margin: 0;
+  }
+  
+  .td-intervalo p {
 	text-align: center;
-	border: 1px solid #ccc;
-}
-
-#content table th {
-	background-color: #eee;
-}
-
-#content table td {
-	background-color: #fff;
-}
-
-.page-break {
-	page-break-after: always;
-}
+	text-transform: uppercase;
+  }
