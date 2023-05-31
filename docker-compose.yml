@@ -1,23 +1,27 @@
 version: '3'
-
 services:
-  db:
-    image: mysql:5.7
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: mypassword
-      MYSQL_DATABASE: mydatabase
-
-  web:
-    build: .
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8000:80"
+      - 8080:80
     volumes:
-      - .:/var/www/html
+      - myapp-data:/var/www/html
     depends_on:
-      - db
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
 
 volumes:
-  db_data:
+  myapp-data:
+  mysql-data:
