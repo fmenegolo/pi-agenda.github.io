@@ -68,7 +68,6 @@
 
 	</script>
 </head>
-
 <body>
 	<?php
 	if (isset($_POST['acao']) && $_POST['form'] == 'f_form') {
@@ -114,6 +113,8 @@
 			Form::alert('erro', 'O campo data não foi preenchido');
 		} else if (empty($atividade_1) || empty($atividade_2) || empty($atividade_3) || empty($atividade_4) || empty($atividade_5) || empty($atividade_6) || empty($atividade_7) || empty($atividade_8) || empty($atividade_9) || empty($atividade_10) || empty($atividade_11)) {
 			Form::alert('erro', 'Preencha todos os campos de atividade');
+		} else if (empty($horarioIn_1) || empty($horarioIn_2) || empty($horarioIn_3) || empty($horarioIn_4) || empty($horarioIn_5) || empty($horarioIn_6) || empty($horarioIn_7) || empty($horarioIn_8) || empty($horarioIn_9) || empty($horarioIn_10) || empty($horarioIn_11)) {
+			Form::alert('erro', 'Preencha o turno de aula');
 		} else {
 			Form::cadastrar(
 				$nome,
@@ -152,12 +153,10 @@
 				$atividade_10,
 				$atividade_11
 			);
-
 			Form::alert('sucesso', 'Aulas do Professor ' . $nome . ' cadastrado(a) com sucesso!');
 		}
 	}
 	?>
-
 
 	<h1>Formulário de Registro de Aulas</h1>
 	<form method="POST">
