@@ -1,8 +1,6 @@
 <?php
-
 	include('config.php');
 	Mysql::conectar();
-
 ?>
 
 <!DOCTYPE html>
