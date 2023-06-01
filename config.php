@@ -7,7 +7,7 @@
 
     spl_autoload_register($print);
 
-    define('HOST', 'mysql');
+    define('HOST', 'piagenda-mysql-1');
     define('DATABASE', 'agenda_bd');
     define('USER', 'root');
     define('PASSWORD', 'root');
