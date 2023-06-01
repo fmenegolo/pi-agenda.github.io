@@ -1,12 +1,12 @@
 <?php
     class Mysql{
         
-        private static $pdo
+        private static $pdo;
 
         public static function conectar(){
             if(self::$pdo == null){
                 try{
-                    self::$spdo = new PDO('mysqlhost='.HOST.'dbname='.DATABASE,USER,PASSWORD,array(PDO::
+                    self::$spdo = new PDO('mysql:host='.HOST.';dbname='.DATABASE,USER,PASSWORD,array(PDO::
                     MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
                     self::$pdo->setAttibute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXEPTION);
                     }catch(Exeption $e){
