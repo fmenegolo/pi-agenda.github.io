@@ -5,7 +5,8 @@
         }
     };
 
-    spl_autoload_register($print)
+    spl_autoload_register($print);
+
     define('HOST', 'mysql');
     define('DATABASE', 'agenda_bd');
     define('USER', 'root');
