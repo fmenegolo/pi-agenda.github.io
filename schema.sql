@@ -7,7 +7,7 @@ CREATE TABLE tb_aulas
     idAula INT AUTO_INCREMENT PRIMARY KEY,
     nomeProf VARCHAR(100),
     dataAula DATE,
-    horaIni TIME,
-    horaFim TIME,
+    horaIni VARCHAR(10),
+    horaFim VARCHAR(10),
     atividade VARCHAR(80)
 );
