@@ -11,3 +11,5 @@ CREATE TABLE tb_aulas
     horaFim VARCHAR(10),
     atividade VARCHAR(80)
 );
+
+ALTER TABLE tb_aulas CHARACTER SET utf8 COLLATE utf8_general_ci;
