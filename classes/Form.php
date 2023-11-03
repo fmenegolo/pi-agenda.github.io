@@ -57,8 +57,7 @@
                 $sql->execute(array($nome, $data, $horarioIn_11, $horarioOut_11, $atividade_11));                           
 
             } else {
-                echo '<h2 style="color:orange;">Erro ao conectar com BD!</h2>'. $e->getMessage();
+                echo '<h2 style="color:orange;">Erro ao conectar com BD!</h2>'. $conexao->getMessage();
             }
         }
     }
-?>
