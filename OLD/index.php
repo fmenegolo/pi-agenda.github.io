@@ -162,18 +162,20 @@
 	<h1>Formulário de Registro de Aulas</h1>
 	<form method="POST">
 		<!-- Parte 1 -->
-		<h2>Informações do Professor</h2>
-		<label for="nome">Nome:</label>
-		<input type="text" id="nome" name="nome" placeholder="Insira o Nome" required><br>
-		<label for="data">Data:</label>
-		<input type="date" id="data" name="data" placeholder="Insira a Data" required><br>
-		<label>Turno de aula:</label>
-		<input type="radio" id="manha-tarde" name="turno" value="manha-tarde" required
-			onclick="preencherHorarios('manha-tarde')">
-		<label for="manha-tarde">Manhã/Tarde</label>
-		<input type="radio" id="tarde-noite" name="turno" value="tarde-noite" required
-			onclick="preencherHorarios('tarde-noite')">
-		<label for="tarde-noite">Tarde/Noite</label><br>
+		<table>
+			<h2>Informações do Professor</h2>
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome" placeholder="Insira o Nome" required><br>
+			<label for="data">Data:</label>
+			<input type="date" id="data" name="data" placeholder="Insira a Data" required><br>
+			<label>Turno de aula:</label>
+			<input type="radio" id="manha-tarde" name="turno" value="manha-tarde" required
+				onclick="preencherHorarios('manha-tarde')">
+			<label for="manha-tarde">Manhã/Tarde</label>
+			<input type="radio" id="tarde-noite" name="turno" value="tarde-noite" required
+				onclick="preencherHorarios('tarde-noite')">
+			<label for="tarde-noite">Tarde/Noite</label>
+		</table><br>
 
 		<!-- OUTRAS OPÇOES -->
 		<h4>Outras Opções</h4>
@@ -181,13 +183,15 @@
 			<thead>
 				<tr>
 					<th>
-						Para ser direcionado à página de 
-							<strong>
-								Relatório de Atividades, 
-									<a target="_blank" href="relatorio.php">
-										clique aqui.
-										</a>
-                    		</strong>
+						<p>
+							Para ser direcionado à página de
+						</p> 
+						<strong>
+							Relatório de Atividades, 
+						<a target="_blank" href="relatorio.php">
+							clique aqui.
+						</a>
+                    	</strong>
 					</th>					
 				</tr>
 			</thead>			

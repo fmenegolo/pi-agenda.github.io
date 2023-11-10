@@ -1,3 +1,7 @@
+<?php
+	include('config.php');
+	Mysql::conectar();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -20,7 +24,7 @@
 
 <body>
 
-    <form id="myForm">
+    <form id="myForm" method="GET">
         <label for="professor">Nome do Professor:</label>
         <input type="text" id="professor" name="professor"><br>
 
@@ -30,6 +34,6 @@
         <label for="ano">Ano:</label>
         <input type="text" id="ano" name="ano"><br>
 
-        <input type="submit" value="Pesquisar">
+        <button type="submit" value="Pesquisar">Gerar Relatório</button>
     </form>
 </body>

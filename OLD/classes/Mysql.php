@@ -16,7 +16,7 @@
                     self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     #echo 'Conexão bem-sucedida!';
                     }catch (PDOException $e) {
-                        echo '<h2 style="color:red;">Erro ao conectar com BD!</h2>'. $e->getMessage();
+                        echo '<h2 style="color:red;">Erro ao conectar com BD!</h2>';
                 }
             }
             return self::$pdo;
