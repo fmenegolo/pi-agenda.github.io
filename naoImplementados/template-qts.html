@@ -9,6 +9,17 @@
 						<p>AGENDA SEMANAL DE TRABALHO</p>
 						<p>PERÍODO SEMANA: 00 A 00 DE MAIO</p>
 					</div>
+					<body>
+						<div class="button">
+							<div class="ball"></div>
+						</div>
+						<script>
+							document.querySelector('.ball').addEventListener('click', (e)=>{
+								e.target.classList.toggle('ball-move');
+								document.body.classList.toggle('dark');
+							});
+						</script>
+					</body>
 					<img src="https://placehold.co/92x50" alt="">
 				</div>
 			</td>
@@ -38,10 +49,10 @@
 				<strong>12h-15 - 13h</strong>
 			</td>
 			<td>
-				<p>Adicionar Info.</p>
+				<p>Adicionar INFO.</p>
 			</td>
 			<td>
-				<p>Adicionar Info.</p>
+				<p>Adicionar INFO.</p>
 			</td>
 			<td>
 				<p>ADICIONAR INFO.</p>
@@ -60,3 +71,5 @@
 		</tr>
 	</tbody>
 </table>
+
+
