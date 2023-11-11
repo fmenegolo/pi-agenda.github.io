@@ -12,13 +12,15 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
         {{--CSS da Aplicação--}}
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/styles.css">
+
+        {{--JS da Aplicação--}}
         <script src="/js/script.js"></script>       
     </head>
     <body>
         <Header>
             <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="" id="navbar">
+                <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
                         <img src="/assets/logo.jpg" alt="EducaMais">
                     </a>

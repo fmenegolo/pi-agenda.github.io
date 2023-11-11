@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\SchollController;
+use App\Http\Controllers\EventController;
 
 
-Route::get('/', [SchollController::class, 'index']);
+Route::get('/', [EventController::class, 'index']);
 
-Route::get('/events/create', [SchollController::class, 'create']);
+Route::get('/events/create', [EventController::class, 'create']);
