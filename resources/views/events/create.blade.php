@@ -11,16 +11,22 @@
 	<form action="/events" method="POST" enctype="multipart/form-data">
 	@csrf
 		<div class="form-group">
+			<label for="image ">
+				imagem:
+			</label>
+			<input type="file" id="image" name="image" class="from-control-file">
+		</div>
+		<div class="form-group">
 			<label for="title">
 				Aula:
 			</label>
 			<input type="text" class="form-control" id="title" name="title" placeholder="Titulo da Aula">
 		</div>
 		<div class="form-group">
-			<label for="image ">
-				imagem:
+			<label for="date">
+				Data da Aula:
 			</label>
-			<input type="file" id="image" name="image" class="from-control-file">
+			<input type="date" class="form-control" id="date" name="date">
 		</div>
 		<div class="form-group">
 			<label for="classroom">

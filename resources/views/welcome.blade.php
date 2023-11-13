@@ -16,19 +16,31 @@
             Proximos Eventos
         </h2>
         <p class="subtitle">Veja os eventos dos proximos dias</p>
-        <div id="cards" class="container row">
+        <div id="cards-container" class="row">
             @foreach ($events as $event)
-                <div id="card" class="col-md-3">
+                <div class="card col-md-3">
                     <img src="/assets/imgEvents/{{$event->image}}" alt="{{ $event->title }}">
-                    <div class="card-body"></div>
+                    <div class="card-body">
                         <p class="card-date"> 
-                            11/11/2023
+                            {{ date('d/m/Y'), strtotime($event->date) }}
                         </p>
-                        <h5 class="card-title">{{ $event->title }}</h5>
-                        <p class="card-participants"> X Participantes</p>
-                        <a href="/events/{{ $event->id }}" class="btn btn-primary">Saber Mais</a>                   
+                        <h5 class="card-title">
+                            {{ $event->title }}
+                        </h5>
+                        <p class="card-participants">
+                            X Participantes
+                        </p>
+                        <a href="/events/{{ $event->id }}" class="btn btn-primary">
+                            Saber Mais
+                        </a>
+                    </div>                   
                 </div>                            
             @endforeach
+            @if(count($events) == 0)
+                <p>
+                    Não há eventos disponiveis.
+                </p>
+            @endif
         </div>
     </div>
 
