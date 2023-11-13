@@ -26,14 +26,45 @@
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">HomePage</a>
+                            <a href="/" class="nav-link">
+                                HomePage
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/events/create" class="nav-link">Cadastrar Aulas</a>
+                            <a href="/events/create" class="nav-link">
+                                Cadastrar Aulas
+                            </a>
+                        </li>
+                        @auth
+                        <li class="nav-item">
+                            <a href="/dashboard" class="nav-link">
+                                Minhas Aulas
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Calendario</a>
-                        </li>                    
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <a href="/logout" 
+                                    class="nav-link"
+                                    onclick="event.preventDefault();
+                                    this.closest('form').submit();">                                    
+                                    Sair
+                                </a>
+                            </form>
+                        </li>        
+                        @endauth
+                        @guest
+                        <li class="nav-item">
+                            <a href="/login" class="nav-link">
+                                Entrar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/register" class="nav-link">
+                                Registrar
+                            </a>
+                        </li>    
+                        @endguest                       
                     </ul>                   
                 </div>            
             </nav>
