@@ -61,19 +61,20 @@ header {
 #navbar a:hover {
   color: #F2A340;
 }
-
+  
 /* Search Container */
-#search-container {
-  background-image: url("../img/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  padding: 50px;
-  text-align: center;
-}
-
+  #search-container {
+    background-image: url("../assets/banner2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 70px;
+    text-align: center;
+  }
+  
+  
 #search-container h1 {
-  color: #F2A340;
+  color: #FFF;
   margin-bottom: 30px;
   font-weight: 900;
 }
