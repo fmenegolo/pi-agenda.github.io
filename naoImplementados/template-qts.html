@@ -2,15 +2,20 @@
 	<thead>
 		<td colspan='6'>
 			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg/83px-Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg.png" alt="">
-
 			<p>E. E. PROF IZABEL DE ALMEIDA MARIN - PEI</p>
 			<p>AGENDA SEMANAL DE TRABALHO</p>
 			<p>PERÍODO SEMANA: 00 A 00 DE MAIO</p>
-			
+
 			<body>
+				<div class="btn-container">
+					<button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+					<button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+				</div>
+
 				<div class="button">
 					<div class="ball"></div>
 				</div>
+
 				<script>
 					document.querySelector('.ball').addEventListener('click', (e) => {
 						e.target.classList.toggle('ball-move');
@@ -69,3 +74,4 @@
 		</tr>
 	</tbody>
 </table>
+</p>
