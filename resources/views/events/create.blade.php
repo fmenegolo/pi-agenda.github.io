@@ -47,6 +47,20 @@
 			</label>
 			<textarea name="description" id="description" class="form-control" placeholder="Oque vai acontecer na aula?"></textarea>
 		</div>
+		<div class="form-group">
+			<label for="items">
+				Recursos de infraestrutura:
+			</label>
+			<div class="form-group">
+				<input type="checkbox" name="items[]" value="Data Show"> Data Show				
+			</div>
+			<div class="form-group">
+				<input type="checkbox" name="items[]" value="Computadores"> Computadores
+			</div>
+			<div class="form-group">
+				<input type="checkbox" name="items[]" value="Caixas de Som"> Caixas de Som
+			</div>
+		</div>
 		<input type="submit" class="btn btn-primary" value="Registrar Aula">
 	</form>
 </div>
