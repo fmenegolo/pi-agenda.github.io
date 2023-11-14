@@ -109,9 +109,14 @@
                         {{ count($event->users) }}
                     </td>
                     <td>
-                        <a href="#">
-                            Sair da Aula
-                        </a>                        
+                        <form action="/events/leave/{{ $event->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger delete-btn">
+                                <ion-icon name='trash-outline'></ion-icon>
+                                Sair da Aula
+                            </button>
+                        </form>                      
                     </td>
                 </tr>                
             @endforeach

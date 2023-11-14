@@ -14,7 +14,7 @@
             {{ $event->title }}
         </h1>
         <p class="event-classroom"><ion-icon name="location-outline"></ion-icon>
-            {{ $event->classroom }}
+            Sala {{ $event->classroom }}
         </p>
         <p class="events-participants"><ion-icon name="people-outline"></ion-icon>
             {{count($event->users)}} Participante(s)
@@ -22,6 +22,7 @@
         <p class="event-owner"><ion-icon name="star-outline"></ion-icon>
             {{ $eventOwner['name'] }}
         </p>
+       @if (!$hasUserJoined)
         <form action="/events/join/{{ $event->id }}" method="POST">
           @csrf
           <a href="/events/join/{{ $event->id }}"
@@ -31,7 +32,12 @@
             this.closest('form').submit()">
             Confirmar Presença
           </a>        
-        </form>
+        </form>           
+       @else
+        <p class="already-joined-msg">
+          Você ja confimou presença nessa aula!
+        </p>           
+       @endif
         <h3>
           Recursos da Sala:
         </h3>
@@ -42,7 +48,8 @@
               <Span>{{ $item }}</Span>
             </li>              
           @endforeach
-        </ul>      
+        </ul>
+      </div>      
       <div class="col-md-12" id="description-container">
         <h3>
             Sobre o evento:
