@@ -1,17 +1,31 @@
 <table class="table table-bordered">
 	<thead>
-		<tr class="table-primary">
-			<td colspan='6'>
-				<div class="thead-content">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg/83px-Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg.png" alt="">
-					<div class="thead-content__text">
-						<p>E. E. PROF IZABEL DE ALMEIDA MARIN - PEI</p>
-						<p>AGENDA SEMANAL DE TRABALHO</p>
-						<p>PERÍODO SEMANA: 00 A 00 DE MAIO</p>
-					</div>
-					<img src="https://placehold.co/92x50" alt="">
+		<td colspan='6'>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg/83px-Bras%C3%A3o_do_estado_de_S%C3%A3o_Paulo.svg.png" alt="">
+			<p>E. E. PROF IZABEL DE ALMEIDA MARIN - PEI</p>
+			<p>AGENDA SEMANAL DE TRABALHO</p>
+			<p>PERÍODO SEMANA: 00 A 00 DE MAIO</p>
+
+			<body>
+				<div class="btn-container">
+					<button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+					<button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
 				</div>
-			</td>
+
+				<div class="button">
+					<div class="ball"></div>
+				</div>
+
+				<script>
+					document.querySelector('.ball').addEventListener('click', (e) => {
+						e.target.classList.toggle('ball-move');
+						document.body.classList.toggle('dark');
+					});
+				</script>
+			</body>
+			<img src="https://placehold.co/92x50" alt="">
+			</div>
+		</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -22,7 +36,7 @@
 			</td>
 			<td colspan=4>
 				<p><strong>DISCIPLINAS:</strong></p>
-				<p>disciplinas*</p>
+				<p>matérias</p>
 			</td>
 		</tr>
 		<tr class="table-secondary">
@@ -34,14 +48,14 @@
 			<td>Sexta</td>
 		</tr>
 		<tr>
-			<td class="table-primary text-danger">
-				<strong>12h-15 - 13h</strong>
+			<td "table-primary text-danger">
+				<p>12h-15 - 13h</p>
 			</td>
 			<td>
-				<p>Adicionar Info.</p>
+				<p>ADICIONAR INFO.</p>
 			</td>
 			<td>
-				<p>Adicionar Info.</p>
+				<p>ADICIONAR INFO.</p>
 			</td>
 			<td>
 				<p>ADICIONAR INFO.</p>
@@ -55,8 +69,9 @@
 		</tr>
 		<tr class='td-intervalo table-warning'>
 			<td colspan="6">
-				<p style="text-align:center;"><strong>intervalo: 16h30 - 16h45</strong></p>
+				<p style="text-align:center;"><strong>Intervalo: 16h30 - 16h45</strong></p>
 			</td>
 		</tr>
 	</tbody>
 </table>
+</p>
