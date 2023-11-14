@@ -20,9 +20,7 @@ class EventController extends Controller
 
         } else {
             $events = Event::all();
-        }
-
-        
+        }        
 
         return view('welcome', ['events' => $events, 'search' => $search ]);
 
@@ -81,10 +79,13 @@ class EventController extends Controller
     public function dashboard() {
 
         $user = auth()->user();
-
+        
         $events = $user->events;
 
-        return view('events.dashboard', ['events' => $events]);
+        $eventsAsParticipant = $user->eventsAsParticipant;
+
+        return view('events.dashboard',
+            ['events' => $events, 'eventsasparticipant' => $eventsAsParticipant]);
 
     }
 
@@ -97,7 +98,13 @@ class EventController extends Controller
 
     public function edit($id) {
 
+        $user = auth()->user();
+
         $event = Event::findOrfail($id);
+
+        if($user->id != $event->user_id){
+            return redirect('/dashboard');
+        }
 
         return view('events.edit', ['event' => $event]);
     }
@@ -130,7 +137,7 @@ class EventController extends Controller
 
         $user = auth()->user();
 
-        $user->eventsAsParticipant()->attach($id);
+        $user->eventsAsParticipant()->attach();
 
         $event = Event::findOrfail($id);
 
