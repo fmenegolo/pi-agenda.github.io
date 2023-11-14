@@ -17,14 +17,21 @@
             {{ $event->classroom }}
         </p>
         <p class="events-participants"><ion-icon name="people-outline"></ion-icon>
-            X Participantes
+            {{count($event->users)}} Participante(s)
         </p>
         <p class="event-owner"><ion-icon name="star-outline"></ion-icon>
             {{ $eventOwner['name'] }}
         </p>
-        <a href="#" class="btn btn-primary" id="event-submit">
+        <form action="/events/join/{{ $event->id }}" method="POST">
+          @csrf
+          <a href="/events/join/{{ $event->id }}"
+            class="btn btn-primary"
+            id="event-submit"
+            onclick="event.preventDefault();
+            this.closest('form').submit()">
             Confirmar Presença
-        </a>
+          </a>        
+        </form>
         <h3>
           Recursos da Sala:
         </h3>
