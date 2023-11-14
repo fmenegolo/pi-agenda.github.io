@@ -87,5 +87,12 @@ class EventController extends Controller
         return view('events.dashboard', ['events' => $events]);
 
     }
+
+    public function destroy($id) {
+
+        $event = Event::findOrfail($id)->delete();
+
+        return redirect('/dashboard')->with('msg', 'Aula excluida com sucesso!');
+    }
 }
 
