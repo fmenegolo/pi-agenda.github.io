@@ -59,6 +59,9 @@ class EventController extends Controller
         
         }
 
+        $user = auth()->user();
+        $event->user_id = $user->id;
+
         $event->save();
 
         return redirect('/events/create')->with('msg', 'Aula cadastrada com sucesso!');
