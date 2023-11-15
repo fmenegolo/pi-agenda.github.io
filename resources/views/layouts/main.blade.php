@@ -18,14 +18,14 @@
         <script src="/js/script.js"></script>
     </head>
     <body>
-        {{--Botão Background}}
+        {{--Botão Background--}}
         <div class="button">
             <div class="ball"></div>
         </div>
 
         <div class="btn-container">
-    <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-    <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+            <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+            <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
         </div>
 
         <script>
@@ -33,8 +33,9 @@
                 e.target.classList.toggle('ball-move');
                 document.body.classList.toggle('dark');
             });
-            </script>
-        <header>
+        </script>
+        {{--Barra de Navegação--}}
+        <header>            
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
@@ -51,12 +52,14 @@
                                 Cadastrar Aulas
                             </a>
                         </li>
+                        {{--Barra de Navegação quando usuario logado --}}
                         @auth
                         <li class="nav-item">
                             <a href="/dashboard" class="nav-link">
                                 Minhas Aulas
                             </a>
                         </li>
+                        {{--botão Sair/Logout--}}
                         <li class="nav-item">
                             <form action="/logout" method="POST">
                                 @csrf
@@ -69,6 +72,7 @@
                             </form>
                         </li>
                         @endauth
+                        {{--Barra de Navegação quando usuario não logado--}}
                         @guest
                         <li class="nav-item">
                             <a href="/login" class="nav-link">
@@ -85,6 +89,7 @@
                 </div>
             </nav>
         </header>
+        {{--Barra de mensagens quando usuario executa uma ação com sucesso--}}
         <main>
             <div class="container-fluid">
                 <div class="rom">
@@ -93,13 +98,16 @@
                             {{ session('msg') }}
                         </p>
                     @endif
+                    {{--Conteúdo das outras paginas--}}
                     @yield('content')
                 </div>
             </div>
         </main>
+        {{--Barra de Rodape--}}
         <footer>
             <p>Agenda Escolar &copy; 2023 </p>
         </footer>
+        {{--Script Ion Icons--}}
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
 </html>
