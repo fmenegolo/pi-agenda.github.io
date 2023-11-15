@@ -17,23 +17,7 @@
         {{--JS da Aplicação--}}
         <script src="/js/script.js"></script>
     </head>
-    <body>
-        {{--Botão Background--}}
-        <div class="button">
-            <div class="ball"></div>
-        </div>
-
-        <div class="btn-container">
-            <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-            <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
-        </div>
-
-        <script>
-            document.querySelector('.ball').addEventListener('click', (e)=>{
-                e.target.classList.toggle('ball-move');
-                document.body.classList.toggle('dark');
-            });
-        </script>
+    <body>        
         {{--Barra de Navegação--}}
         <header>            
             <nav class="navbar navbar-expand-lg navbar-light">
