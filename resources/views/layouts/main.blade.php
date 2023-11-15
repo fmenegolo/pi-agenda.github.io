@@ -15,9 +15,25 @@
         <link rel="stylesheet" href="/css/styles.css">
 
         {{--JS da Aplicação--}}
-        <script src="/js/script.js"></script>       
+        <script src="/js/script.js"></script>
     </head>
     <body>
+        {{--Botão Background}}
+        <div class="button">
+            <div class="ball"></div>
+        </div>
+
+        <div class="btn-container">
+    <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+    <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+        </div>
+
+        <script>
+            document.querySelector('.ball').addEventListener('click', (e)=>{
+                e.target.classList.toggle('ball-move');
+                document.body.classList.toggle('dark');
+            });
+            </script>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
@@ -44,14 +60,14 @@
                         <li class="nav-item">
                             <form action="/logout" method="POST">
                                 @csrf
-                                <a href="/logout" 
+                                <a href="/logout"
                                     class="nav-link"
                                     onclick="event.preventDefault();
-                                    this.closest('form').submit();">                                    
+                                    this.closest('form').submit();">
                                     Sair
                                 </a>
                             </form>
-                        </li>        
+                        </li>
                         @endauth
                         @guest
                         <li class="nav-item">
@@ -63,10 +79,10 @@
                             <a href="/register" class="nav-link">
                                 Registrar
                             </a>
-                        </li>    
-                        @endguest                       
-                    </ul>                   
-                </div>            
+                        </li>
+                        @endguest
+                    </ul>
+                </div>
             </nav>
         </header>
         <main>
@@ -75,7 +91,7 @@
                     @if(session('msg'))
                         <p class="msg">
                             {{ session('msg') }}
-                        </p>                     
+                        </p>
                     @endif
                     @yield('content')
                 </div>
@@ -84,6 +100,6 @@
         <footer>
             <p>Agenda Escolar &copy; 2023 </p>
         </footer>
-        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>        
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
 </html>

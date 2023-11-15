@@ -7,6 +7,7 @@ body {
   min-height: 100vh;
   padding-bottom: 100px;
   position: relative;
+  font-size: 16px;
 }
 
 header {
@@ -70,7 +71,7 @@ header {
 #navbar a:hover {
   color: #F2A340;
 }
-  
+
 /* Search Container */
   #search-container {
     background-image: url("../assets/banner2.jpg");
@@ -80,8 +81,8 @@ header {
     padding: 70px;
     text-align: center;
   }
-  
-  
+
+
 #search-container h1 {
   color: #FFF;
   margin-bottom: 30px;
@@ -241,4 +242,51 @@ footer {
 
 footer p {
   margin-bottom: 0;
+}
+/* BOTAO */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDEDED;
+    width: 100%;
+    height: 100vh;
+    transition: background 1s;
+}
+.button{
+    position: relative;
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 2.5px 0 #39a2db59;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+.ball{
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #4b4c4d;
+	transition: left 1s;
+}
+.ball-move{
+    left: calc(100% - 40px);
+}
+.dark {
+	background-color: #000000;
+	color: #ffffff;
+}
+.dark p {
+	background-color: #000000;
+	color: #ffffff;
 }
