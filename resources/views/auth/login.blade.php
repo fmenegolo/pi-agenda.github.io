@@ -43,11 +43,10 @@
                     {{ __('Log in') }}
                 </x-button>
             </div>
-            <div>
-                <a href="{{url('auth/google')}}">
-                    Login Use Google
+            <div class='block mt-4'>                
+                <a href="{{URL::to('auth/google')}}">
+                    <img src="{{URL::asset('assets/google.png')}}" height="45px" alt="">
                 </a>
-
             </div>
         </form>
     </x-authentication-card>
