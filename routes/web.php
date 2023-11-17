@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ClassController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\EventController;
+
+use App\Http\Controllers\GoogleController;
 use GuzzleHttp\Middleware;
 
 Route::get('/', [EventController::class, 'index']);
@@ -27,3 +28,5 @@ Route::get('/events/edit/{id}', [EventController::class, 'edit'])->middleware('a
 Route::put('/events/update/{id}', [EventController::class, 'update'])->middleware('auth');
 Route::post('/events/join/{id}', [EventController::class, 'joinEvent'])->middleware('auth');
 Route::delete('/events/leave/{id}', [EventController::class, 'leaveEvent'])->middleware('auth');
+Route::get('auth/google', [GoogleController::class, 'googlepage']);
+Route::get('auth/google/callback', [GoogleController::class, 'googlecallback']);
